@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.7",
+    "@next/font": "^13.1.6",
+    "dayjs": "^1.11.7",
+    "next": "^13.1.6",
+    "normalize.css": "^8.0.1",
+    "overlayscrollbars": "^1.13.3",
+    "overlayscrollbars-react": "^0.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-virtuoso": "^4.0.9",
+    "sharp": "^0.31.3"
+  }
+}
