@@ -39,7 +39,7 @@ const MaxFooter = ({ dark }) => {
               </span>
             </Typography>
             <Tooltip title='Site code' >
-              <IconButton component={Link} href='https://github.com/maxhelsel/me' target='_blank' target='_blank' rel='nofollow noopener' >
+              <IconButton component={Link} href='https://github.com/maxhelsel/me' target='_blank' rel='noopener' >
                 <GitHubIcon />
               </IconButton>
             </Tooltip>
