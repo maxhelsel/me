@@ -89,20 +89,20 @@ const WearHat = props => {
   if (props.hat === 1) {
     return (
       <Grid container item flexWrap='nowrap' style={{ position: 'absolute', justifyContent: 'center', top: -28, left: -3 }} >
-        <Image priority src={CowboyHat} alt='cowboy hat' placeholder='blur' />
+        <Image priority src={CowboyHat} alt='cowboy hat' />
       </Grid>
     )
   };
   if (props.hat === 2) {
     return (
       <Grid container item flexWrap='nowrap' style={{ position: 'absolute', justifyContent: 'center', top: -64, left: -2 }} >
-        <Image priority src={WizardHat} alt='wizard hat' placeholder='blur' />
+        <Image priority src={WizardHat} alt='wizard hat' />
       </Grid>
     )
   };
   return (
     <Grid container item flexWrap='nowrap' style={{ position: 'absolute', justifyContent: 'center', top: 23, left: 12 }} >
-      <Image priority src={MaskHat} alt='gas mask' placeholder='blur' />
+      <Image priority src={MaskHat} alt='gas mask' />
     </Grid>
   );
 };
@@ -117,7 +117,7 @@ const MeAndMyEyes = props => {
 
   return (
     <Grid container item style={{ maxWidth: 285, position: 'relative', justifyContent: 'center' }} >
-      <Image priority src={MyPic} alt='max' placeholder='blur' />
+      <Image priority src={MyPic} alt='max' />
       {eyes
         ? <MyEyes eyes={eyes} />
         : null
