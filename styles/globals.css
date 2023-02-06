@@ -10,17 +10,19 @@ body {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-* {
-  box-sizing: border-box;
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
 img {
@@ -39,6 +41,78 @@ img {
 }
 
 .main {
-  min-height: 100vh;
-  padding-bottom: 300px;
+  
+}
+
+.slider-container {
+  max-width: 100%;
+  width: 100%;
+}
+
+.glasses:hover .glass {
+  background-image: linear-gradient(to bottom, #4DE2DC, #3888D1 70%);
+}
+
+.glasses {
+  position: relative;
+  width: 100px;
+  height: 40px;
+}
+
+.g-top {
+  position: absolute;
+  height: 10px;
+  width: 90px;
+  background-color: #3C3C3C;
+  top: 5px;
+  left: 0px;
+  border-radius: 5px;
+}
+
+.glass {
+  position: absolute;
+  height: 30px;
+  width: 36px;
+  background-image: linear-gradient(to bottom, #ff7660, #ff427d 70%);
+  border: 3px solid #3C3C3C;
+  top: 0;
+}
+
+.g-left {
+  left: 11px;
+  border-radius: 12px 12px 33px 29px;
+}
+
+.g-right {
+  left: 50px;
+  border-radius: 12px 12px 29px 33px;
+}
+
+.colorSphereContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: unset;
+  position: relative;
+  border: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.colorSphereInner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.colorSphereSelectedIcon {
+  display: flex;
+  position: absolute;
 }

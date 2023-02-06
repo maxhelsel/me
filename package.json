@@ -8,17 +8,20 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.7",
     "@next/font": "^13.1.6",
+    "canvas-confetti": "^1.6.0",
     "dayjs": "^1.11.7",
     "next": "^13.1.6",
     "normalize.css": "^8.0.1",
-    "overlayscrollbars": "^1.13.3",
-    "overlayscrollbars-react": "^0.3.0",
+    "nuka-carousel": "^5.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-virtuoso": "^4.0.9",
+    "react-hook-mighty-mouse": "^1.4.31",
     "sharp": "^0.31.3"
+  },
+  "devDependencies": {
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6"
   }
 }
