@@ -6,7 +6,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 import { SunIcon, MoonIcon } from '/ui/icons/Customs.js';
 
-const LandingLogo = props => {
+const LandingTheme = props => {
 
   return (
     <Grid container justifyContent='flex-end' style={{ maxWidth: '880px', margin: '0 auto', position: 'relative'}} >
@@ -27,4 +27,4 @@ const LandingLogo = props => {
   )
 };
 
-export default LandingLogo;
+export default LandingTheme;

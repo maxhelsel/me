@@ -8,7 +8,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import LandingLogo from '/ui/navigation/LandingLogo.js';
+import LandingTheme from '/ui/navigation/LandingTheme.js';
 import startTheme from '/theme/StartTheme.js';
 import createEmotionCache from '/theme/createEmotionCache.js';
 
@@ -23,7 +23,7 @@ const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 const Logo = ({ dark }) => {
   const colorMode = React.useContext(ColorModeContext);
   return (
-    <LandingLogo toggleMode={colorMode.toggleColorMode} dark={dark} />
+    <LandingTheme toggleMode={colorMode.toggleColorMode} dark={dark} />
   );
 }
 
