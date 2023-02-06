@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import { useTheme } from '@mui/material/styles';
-import { Link as MuiLink } from '@mui/material/Link';
+import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
@@ -37,7 +37,7 @@ const MaxFooter = ({ dark }) => {
               </span>
             </Typography>
             <Tooltip title='Site code' >
-              <IconButton component={MuiLink} href='https://github.com/maxhelsel/me' target='_blank' target='_blank' rel='nofollow noopener' >
+              <IconButton component={Link} href='https://github.com/maxhelsel/me' target='_blank' target='_blank' rel='nofollow noopener' >
                 <GitHubIcon />
               </IconButton>
             </Tooltip>

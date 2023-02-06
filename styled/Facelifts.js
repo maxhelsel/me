@@ -4,8 +4,8 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 
-import { Link as MuiLink } from '@mui/material/Link';
 import { ExternalIcon } from '/ui/icons/Customs.js';
 import { StepTabButton, StepTabBar } from '/styled/Buttons.js';
 
@@ -42,7 +42,7 @@ export const FaceliftTabs = props => {
 export const FaceliftFooter = ({ newLink }) => {
   return (
     <Button
-      component={MuiLink}
+      component={Link}
       href={newLink || '/'}
       target='_blank'
       style={{ textTransform: 'none', padding: '0px', position: 'absolute', bottom: 12, right: 12, background: 'rgba(0, 0, 0, .8)', color: 'white' }}

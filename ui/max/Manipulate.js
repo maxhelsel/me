@@ -28,11 +28,13 @@ const Manipulate = props => {
     <>
       <FunButton />
       <EyePicker
+        dark={dark}
         mobile={mobile}
         eyes={eyes}
         handleEyes={handleEyes}
       />
       <HatPicker
+        dark={dark}
         mobile={mobile}
         handleHat={handleHat}
         hat={hat}

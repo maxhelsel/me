@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
-import { Link as MuiLink } from '@mui/material/Link';
+import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 
 import Grid from '@mui/material/Grid';
@@ -97,6 +97,7 @@ const Landing = props => {
         <ManipulateContainer container item mobile={props.mobile} justifyContent='flex-end' alignItems={props.mobile ? 'flex-end' : 'center'} >
           <Manipulate
             mobile={props.mobile}
+            dark={props.dark}
             cleared={Boolean(!eyes && !shades && !hat)}
             handleClear={handleClear}
             eyes={eyes}
@@ -148,10 +149,10 @@ const Landing = props => {
                 </Grid>
               </Grid>
               <Grid container item flex='0' flexWrap='nowrap' style={{ flexFlow: props.mobile ? 'column' : 'row', alignItems: 'center' }} >
-                <IconButton component={MuiLink} href='https://github.com/maxhelsel' target='_blank' >
+                <IconButton component={Link} href='https://github.com/maxhelsel' target='_blank' >
                   <GitHubIcon />
                 </IconButton>
-                <IconButton component={MuiLink} href='https://linkedin.com/in/maxhelsel' target='_blank' >
+                <IconButton component={Link} href='https://linkedin.com/in/maxhelsel' target='_blank' >
                   <LinkedInIcon />
                 </IconButton>
                 <IconButton onClick={handleOpen} >
