@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Carousel from 'nuka-carousel';
 import { TrendIcon } from '/ui/icons/Customs.js';
 
-const StrikeInfo = ({ value }) => {
+const StrikeInfo = ({ ticker, value, fallback }) => {
 
   let gained = Boolean(value && value.o && value.c && (value.o > value.c));
   let delta = value && value.o && value.c
@@ -15,9 +15,14 @@ const StrikeInfo = ({ value }) => {
   return (
     <>
       <Typography variant='b1' display='inline' style={{ color: 'white', paddingRight: 4 }} >
-        {value?.c || ''}
+        {value?.c || fallback}
       </Typography>
-      <TrendIcon down={!gained} darkColor color={gained ? 'lime' : 'tomato'} size={20} />
+      <TrendIcon
+        size={20}
+        darkColor
+        down={(!value && ticker !== 'uvxy') ? false : !gained}
+        color={((!value && ticker !== 'uvxy') || gained) ? 'lime' : 'tomato'}
+      />
     </>
   )
 };
@@ -40,11 +45,11 @@ const StockFeed = props => {
   const mdbObj = mdb?.results || undefined;
 
   let tickerArr = [
-    { ticker: 'nvda', value: (nvdaObj && nvdaObj[0]) || undefined },
-    { ticker: 'spy', value: (spyObj && spyObj[0]) || undefined },
-    { ticker: 'uvxy', value: (uvxyObj && uvxyObj[0]) || undefined },
-    { ticker: 'qqq', value: (qqqObj && qqqObj[0]) || undefined },
-    { ticker: 'mdb', value: (mdbObj && mdbObj[0]) || undefined }
+    { ticker: 'nvda', value: (nvdaObj && nvdaObj[0]) || undefined, fallback: 209.11 },
+    { ticker: 'spy', value: (spyObj && spyObj[0]) || undefined, fallback: 401.22 },
+    { ticker: 'uvxy', value: (uvxyObj && uvxyObj[0]) || undefined, fallback: 5.3 },
+    { ticker: 'qqq', value: (qqqObj && qqqObj[0]) || undefined, fallback: 304.88 },
+    { ticker: 'mdb', value: (mdbObj && mdbObj[0]) || undefined, fallback: 221.4 }
   ];
 
   return (
@@ -63,7 +68,11 @@ const StockFeed = props => {
               <Typography variant='b1' display='inline' color='primary.white' style={{ padding: '0px 4px', textTransform: 'uppercase' }} >
                 {item.ticker}
               </Typography>
-              <StrikeInfo value={item.value} />
+              <StrikeInfo
+                ticker={item.ticker}
+                value={item.value}
+                fallback={item.fallback}
+              />
             </Grid>
           ))}
         </Carousel>
