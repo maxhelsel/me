@@ -4,7 +4,7 @@ import { noto } from '/theme/StartTheme.js';
 
 export default function Document() {
   return (
-    <Html className={noto.className} >
+    <Html lang="en" className={noto.className} >
       <Head >
         <link rel="shortcut icon" href="/favicon.ico" />
       	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico" />
