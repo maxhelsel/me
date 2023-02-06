@@ -5,12 +5,12 @@
 const ContentSecurityPolicy = `
   default-src 'self';
   frame-src https://www.google.com;
-  img-src 'self';
-  script-src 'self' https://www.google.com https://www.gstatic.com https://www.google-analytics.com https://www.googletagmanager.com;
+  img-src data: 'self';
+  script-src 'self' blob: https://www.google.com https://www.gstatic.com https://www.google-analytics.com https://www.googletagmanager.com;
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
   object-src 'none';
   frame-ancestors 'none';
-  connect-src 'self' https://www.google-analytics.com;
+  connect-src 'self' vitals.vercel-insights.com https://www.google-analytics.com;
   font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;
   form-action 'self';
   block-all-mixed-content;
