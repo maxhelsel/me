@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { styled } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 
@@ -20,15 +19,6 @@ import { BoxBorderStyled } from '/styled/Boxes.js';
 import { CodeIcon, CandleIcon, GitHubIcon, LinkedInIcon, MailIcon } from '/ui/icons/Customs.js';
 
 import landingStyles from '/styles/landing.module.css';
-
-const ManipulateContainer = styled(Grid, {
-  shouldForwardProp: prop => (prop !== 'mobile')
-})(({ theme, mobile }) => ({
-  flexFlow: mobile ? 'column' : 'row',
-  marginRight: mobile ? 0 : 36,
-  top: mobile ? 80 : undefined,
-  position: mobile ? 'absolute' : 'relative'
-}));
 
 const Landing = props => {
 
@@ -94,20 +84,18 @@ const Landing = props => {
     <>
       <LandingNavbar {...props} >
         <Grid container item flex='1' />
-        <ManipulateContainer container item mobile={props.mobile} justifyContent='flex-end' alignItems={props.mobile ? 'flex-end' : 'center'} >
-          <Manipulate
-            mobile={props.mobile}
-            dark={props.dark}
-            cleared={Boolean(!eyes && !shades && !hat)}
-            handleClear={handleClear}
-            eyes={eyes}
-            shades={shades}
-            hat={hat}
-            handleHat={handleHat}
-            handleEyes={handleEyes}
-            handleShades={handleShades}
-          />
-        </ManipulateContainer>
+        <Manipulate
+          mobile={props.mobile}
+          dark={props.dark}
+          cleared={Boolean(!eyes && !shades && !hat)}
+          handleClear={handleClear}
+          eyes={eyes}
+          shades={shades}
+          hat={hat}
+          handleHat={handleHat}
+          handleEyes={handleEyes}
+          handleShades={handleShades}
+        />
       </LandingNavbar>
       <Grid container item style={{ flexFlow: 'column', maxWidth: 880 }} >
         <Grid container item style={{ flexFlow: 'column', alignItems: 'center', paddingTop: 48 }} >

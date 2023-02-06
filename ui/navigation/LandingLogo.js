@@ -10,7 +10,7 @@ const LandingLogo = props => {
 
   return (
     <Grid container justifyContent='flex-end' style={{ maxWidth: '880px', margin: '0 auto', position: 'relative'}} >
-      <Grid container item alignItems='flex-start' style={{ width: 'auto', flexFlow: 'row', position: 'absolute', top: 32, zIndex: 2 }} >
+      <Grid container item alignItems='flex-start' style={{ width: 'auto', flexFlow: 'row', position: 'absolute', top: 32, zIndex: 2, paddingRight: 12 }} >
         <Paper style={{ display: 'flex', borderRadius: '50%', padding: 2, margin: 4 }} >
           <Tooltip title='Toggle theme' >
             <IconButton

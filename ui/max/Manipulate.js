@@ -1,4 +1,5 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Tooltip from '@mui/material/Tooltip';
@@ -8,6 +9,16 @@ import FunButton from '/ui/buttons/FunButton.js';
 import EyePicker from '/ui/buttons/EyePicker.js';
 import HatPicker from '/ui/buttons/HatPicker.js';
 import { SunglassesIcon, FaceIcon } from '/ui/icons/Customs.js';
+
+const ManipulateContainer = styled(Grid, {
+  shouldForwardProp: prop => (prop !== 'mobile')
+})(({ theme, mobile }) => ({
+  flexFlow: mobile ? 'column' : 'row',
+  marginRight: mobile ? 0 : 48,
+  paddingRight: mobile ? 12 : undefined,
+  top: mobile ? 80 : undefined,
+  position: mobile ? 'absolute' : 'relative'
+}));
 
 const Manipulate = props => {
 
@@ -25,7 +36,7 @@ const Manipulate = props => {
   } = props;
 
   return (
-    <>
+    <ManipulateContainer container item mobile={props.mobile} justifyContent='flex-end' alignItems={props.mobile ? 'flex-end' : 'center'} >
       <FunButton />
       <EyePicker
         dark={dark}
@@ -69,7 +80,7 @@ const Manipulate = props => {
         ? null
         : <div style={{ margin: 4, height: 24, width: 2, background: '#eee' }} />
       }
-    </>
+    </ManipulateContainer>
   )
 };
 
