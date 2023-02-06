@@ -7,6 +7,10 @@ import { FaceliftTabs, FaceliftFooter } from '/styled/Facelifts.js';
 import { ImageRatioBox } from '/styled/Images.js';
 import { BoxBorderStyled } from '/styled/Boxes.js';
 
+import BcLogo from '/public/bravocareLogo.png';
+import OldBravocare from '/public/oldBravocare.png';
+import NewBravocare from '/public/newBravocare.png';
+
 const BravoCare = props => {
 
   const [ step, setStep ] = useState(2);
@@ -20,7 +24,7 @@ const BravoCare = props => {
         <InfoBox
           title='BravoCare'
           link='https://bravocare.com'
-          icon={<Image src='/bravocareLogo.png' height={32} width={32} alt='bravocare' />}
+          icon={<Image src={BcLogo} alt='bravocare' width={32} height={32} />}
           padding='0px'
           italic
           textLines={[
@@ -37,8 +41,8 @@ const BravoCare = props => {
       <Grid container item xs={12} style={{ position: 'relative' }} >
         <ImageRatioBox ratio='62.5%' >
           {step === 1
-            ? <Image src='/oldBravocare.png' fill style={{ objectFit: 'cover' }} alt='old bravocare' sizes="(max-width: 768px) 100vw,(max-width: 1700px) 50vw" />
-            : <Image src='/newBravocare.png' fill style={{ objectFit: 'cover' }} alt='new bravocare' sizes="(max-width: 768px) 100vw,(max-width: 1700px) 50vw" />
+            ? <Image src={OldBravocare} fill style={{ objectFit: 'cover' }} alt='old bravocare' sizes="(max-width: 768px) 100vw,(max-width: 1700px) 50vw" />
+            : <Image src={NewBravocare} fill style={{ objectFit: 'cover' }} alt='new bravocare' sizes="(max-width: 768px) 100vw,(max-width: 1700px) 50vw" />
           }
         </ImageRatioBox>
         <FaceliftFooter newLink='https://demo-bravocare.vercel.app/' />

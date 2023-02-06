@@ -45,8 +45,6 @@ const MyApp = ({
 
   const theme = React.useMemo(() => startTheme(dark), [dark]);
 
-  const getLayout = Component.getLayout || ((page) => page);
-
   return (
     <ColorModeContext.Provider value={colorMode} >
       <CacheProvider value={emotionCache} >
@@ -56,7 +54,7 @@ const MyApp = ({
         <ThemeProvider theme={theme} >
           <CssBaseline />
           <Logo dark={dark} />
-          {getLayout(<Component {...pageProps} />)}
+          <Component {...pageProps} />
         </ThemeProvider>
       </CacheProvider>
     </ColorModeContext.Provider>

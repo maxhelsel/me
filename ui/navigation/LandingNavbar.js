@@ -5,6 +5,9 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Grid from '@mui/material/Grid';
 
+import LimeLogo from '/public/maxLogoLime.png';
+import DarkLogo from '/public/maxLogoDark.png';
+
 import landingStyles from '/styles/landing.module.css';
 
 const LandingNavbar = props => {
@@ -17,8 +20,8 @@ const LandingNavbar = props => {
             <Link href='/' style={{ display: 'flex', flex: 1 }} >
               <Grid container item style={{ maxWidth: 128, paddingLeft: 12, position: 'relative' }} >
                 {props.dark
-                  ? <Image src="/maxLogoLime.png" alt="max" height={78} width={128} />
-                  : <Image src="/maxLogoDark.png" alt="max" height={78} width={128} />
+                  ? <Image priority src={LimeLogo} alt="max" height={78} width={128} />
+                  : <Image priority src={DarkLogo} alt="max" height={78} width={128} />
                 }
               </Grid>
             </Link>

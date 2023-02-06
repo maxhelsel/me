@@ -9,6 +9,8 @@ import InfoBox from '/ui/boxes/InfoBox.js';
 import { BoxBorderStyled } from '/styled/Boxes.js';
 import { PrivacyIcon } from '/ui/icons/Customs.js';
 
+import ConjureLogo from '/public/conjure.png';
+
 const LandingBuilding = props => {
   return (
     <BoxBorderStyled
@@ -26,7 +28,7 @@ const LandingBuilding = props => {
         <InfoBox
           title='Conjure'
           link='https://conjure.io'
-          icon={<Image src='/conjure.png' alt='conjure' height={30} width={30} />}
+          icon={<Image src={ConjureLogo} alt='conjure' height={30} width={30}  />}
           iconBg='rgba(25, 25, 220, .1)'
           textLines={[
             `Make any content, and monetize it. Multimedia social content platform.`,

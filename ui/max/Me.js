@@ -6,6 +6,11 @@ import useMightyMouse from 'react-hook-mighty-mouse';
 import Grid from '@mui/material/Grid';
 import { EyeIcon, SunglassesIcon } from '/ui/icons/Customs.js';
 
+import MyPic from '/public/maxBW285x220.png';
+import CowboyHat from '/public/cowboyHat.png';
+import WizardHat from '/public/wizardHat.png';
+import MaskHat from '/public/gasMaskHat.png';
+
 const Eye = styled('div', {
   shouldForwardProp: (prop) => prop !== 'background'
 })(({ theme, background }) => ({
@@ -75,30 +80,31 @@ const MySunglasses = props => {
   )
 };
 
-const WearHat = props => {
 
+
+const WearHat = props => {
+  if (!props.hat) {
+    return null
+  };
   if (props.hat === 1) {
     return (
       <Grid container item flexWrap='nowrap' style={{ position: 'absolute', justifyContent: 'center', top: -28, left: -3 }} >
-        <Image priority src='/cowboyHat.png' alt='cowboy hat' height='101' width='154' />
+        <Image priority src={CowboyHat} alt='cowboy hat' placeholder='blur' />
       </Grid>
     )
-  }
-
+  };
   if (props.hat === 2) {
     return (
       <Grid container item flexWrap='nowrap' style={{ position: 'absolute', justifyContent: 'center', top: -64, left: -2 }} >
-        <Image priority src='/wizardHat.png' alt='wizard hat' height='114' width='124' />
+        <Image priority src={WizardHat} alt='wizard hat' placeholder='blur' />
       </Grid>
     )
-  }
-
+  };
   return (
     <Grid container item flexWrap='nowrap' style={{ position: 'absolute', justifyContent: 'center', top: 23, left: 12 }} >
-      <Image priority src='/gasMaskHat.png' alt='gas mask' height='142' width='126' />
+      <Image priority src={MaskHat} alt='gas mask' placeholder='blur' />
     </Grid>
-  )
-
+  );
 };
 
 const MeAndMyEyes = props => {
@@ -111,7 +117,7 @@ const MeAndMyEyes = props => {
 
   return (
     <Grid container item style={{ maxWidth: 285, position: 'relative', justifyContent: 'center' }} >
-      <Image priority src='/maxBW285x220.png' height='220' width='285' alt='max' />
+      <Image priority src={MyPic} alt='max' placeholder='blur' />
       {eyes
         ? <MyEyes eyes={eyes} />
         : null
@@ -120,10 +126,7 @@ const MeAndMyEyes = props => {
         ? <MySunglasses />
         : null
       }
-      {hat
-        ? <WearHat hat={hat} />
-        : null
-      }
+      <WearHat hat={hat} />
     </Grid>
   )
 };

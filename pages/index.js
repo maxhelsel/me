@@ -1,22 +1,15 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 
 import Landing from '/ui/landing/Landing.js';
 import LandingBuilding from '/ui/landing/LandingBuilding.js';
 import LandingTools from '/ui/landing/LandingTools.js';
 import LandingFacelifts from '/ui/landing/LandingFacelifts.js';
-
 import MaxFooter from '/ui/navigation/MaxFooter.js';
 
-import Grid from '@mui/material/Grid';
-
-// This function gets called at build time on server-side.
-// It may be called again, on a serverless function, if
-// revalidation is enabled and a new request comes in
 export async function getStaticProps() {
 
   const res1 = await fetch(`https://api.polygon.io/v2/aggs/ticker/NVDA/prev?adjusted=true&apiKey=${process.env.NEXT_PUBLIC_POLYGON_KEY}`);

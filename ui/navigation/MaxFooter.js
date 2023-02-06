@@ -12,6 +12,8 @@ import { ImageWrapperStyled } from '/styled/Images.js';
 import { FooterContainerStyled, FooterBoxStyled } from '/styled/Boxes.js';
 import { GitHubIcon } from '/ui/icons/Customs.js';
 
+import LimeLogo from '/public/maxLogoLime.png';
+import DarkLogo from '/public/maxLogoDark.png';
 
 const MaxFooter = ({ dark }) => {
 
@@ -24,8 +26,8 @@ const MaxFooter = ({ dark }) => {
           <div style={{ width: '100%', height: '100%', maxWidth: '100px', position: 'relative' }} >
             <ImageWrapperStyled ratio={`${aspectRatio}%`} >
               {dark
-                ? <Image src="/maxLogoLime.png" alt="max" fill style={{ objectFit: 'cover' }} sizes="50vw" />
-                : <Image src="/maxLogoDark.png" alt="max" fill style={{ objectFit: 'cover' }} sizes="50vw" />
+                ? <Image src={LimeLogo} alt="max" fill style={{ objectFit: 'cover' }} sizes="50vw" />
+                : <Image src={DarkLogo} alt="max" fill style={{ objectFit: 'cover' }} sizes="50vw" />
               }
             </ImageWrapperStyled>
           </div>
