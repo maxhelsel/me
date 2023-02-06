@@ -1,4 +1,4 @@
-import { Inter, Roboto, Noto_Sans } from '@next/font/google';
+import { Noto_Sans } from '@next/font/google';
 import { createTheme } from '@mui/material/styles';
 
 export const noto = Noto_Sans({
@@ -6,8 +6,6 @@ export const noto = Noto_Sans({
   style: ['normal', 'italic'],
   subsets: ['latin']
 });
-
-let dark = false;
 
 const theme = (dark) => createTheme({
   palette: {

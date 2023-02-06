@@ -1,4 +1,6 @@
 {
+  "name": "Max",
+  "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +12,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.7",
     "@next/font": "^13.1.6",
+    "@vercel/analytics": "^0.1.8",
     "canvas-confetti": "^1.6.0",
     "dayjs": "^1.11.7",
     "next": "^13.1.6",

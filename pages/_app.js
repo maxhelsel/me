@@ -1,12 +1,12 @@
 import * as React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/react';
 import { useRouter } from 'next/router';
 
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import useMediaQuery from '@mui/material/useMediaQuery';
 
 import LandingTheme from '/ui/navigation/LandingTheme.js';
 import startTheme from '/theme/StartTheme.js';
@@ -35,7 +35,6 @@ const MyApp = ({
 
   const router = useRouter();
   const [dark, setDark] = React.useState(false);
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   const colorMode = React.useMemo(() => ({
     toggleColorMode: () => {
@@ -55,6 +54,7 @@ const MyApp = ({
           <CssBaseline />
           <Logo dark={dark} />
           <Component {...pageProps} />
+          <Analytics />
         </ThemeProvider>
       </CacheProvider>
     </ColorModeContext.Provider>
