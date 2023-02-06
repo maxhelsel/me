@@ -42,6 +42,7 @@ const OutlinedIcon = props => {
     color,
     strokeWidth,
     viewBox,
+    darkColor,
     children
   } = props;
 
@@ -59,7 +60,9 @@ const OutlinedIcon = props => {
         display: 'inline-block',
         verticalAlign: 'middle',
         fill: 'none',
-        stroke: (theme) => theme.palette.mode === 'dark' ? '#fff' : color ? color : '#345',
+        stroke: (theme) => theme.palette.mode === 'dark'
+          ? (darkColor && color) ? color : '#fff'
+          : color ? color : '#345',
         width: size ? `${size}px` : '24px',
         height: size ? `${size}px` : '24px'
       }}

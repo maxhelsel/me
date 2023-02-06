@@ -17,7 +17,7 @@ const StrikeInfo = ({ value }) => {
       <Typography variant='b1' display='inline' style={{ color: 'white', paddingRight: 4 }} >
         {value?.c || ''}
       </Typography>
-      <TrendIcon down={!gained} color={gained ? 'lime' : 'tomato'} size={20} />
+      <TrendIcon down={!gained} darkColor color={gained ? 'lime' : 'tomato'} size={20} />
     </>
   )
 };
