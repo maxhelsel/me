@@ -45,6 +45,7 @@ const theme = (dark) => createTheme({
     },
     content: {
       paper: dark ? '#234' : '#FFFFFF',
+      facelift: dark ? '#000' : 'rgba(0, 0, 0, .8)',
       footer: dark ? '#000' : '#f3f5f7',
       border: dark ? '1px solid rgba(0, 255, 0, .2)' : '1px solid rgba(0, 0, 0, .08)',
       borderHover: '1px solid rgba(0, 0, 255, .3)',
@@ -77,6 +78,17 @@ const theme = (dark) => createTheme({
       fontFamily: noto.style.fontFamily,
       color: '#567',
       fontWeight: 'normal'
+    },
+    titleLink: {
+      fontSize: '.8125rem',
+      lineHeight: '1.25rem',
+      fontFamily: noto.style.fontFamily,
+      color: dark ? 'lime' : '#234',
+      fontWeight: 600,
+      '&:hover': {
+        color: 'blue',
+        textDecoration: 'underline'
+      }
     },
     b1: {
       fontSize: '.8125rem',

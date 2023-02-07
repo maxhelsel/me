@@ -28,6 +28,7 @@ const InfoBox = props => {
     iconBg,
     title,
     link,
+    titleLink,
     textLines,
     bulletLines,
     pendingLines
@@ -39,9 +40,16 @@ const InfoBox = props => {
         {icon}
       </IconHolderStyled>
       <Grid container item flexDirection='column' justifyContent='center' alignItems='flex-start' style={{ paddingLeft: 12 }} >
-        <Typography variant='b1' >
-          {title || ''}
-        </Typography>
+        {titleLink
+          ? <a href={titleLink} target='_blank' rel='nofollow noopener' >
+              <Typography variant='titleLink' >
+                {title || ''}
+              </Typography>
+            </a>
+          : <Typography variant='b1' >
+              {title || ''}
+            </Typography>
+        }
         {link
           ? <Typography variant='link' style={{ paddingBottom: 4 }} >
               <a href={link} target='_blank' rel='nofollow noopener' >

@@ -5,45 +5,17 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import { KeyDownIcon } from '/ui/icons/Customs.js';
 
-export const OrangeButton = styled(Button)(({ theme }) => ({
-  padding: '8px 12px',
-  whiteSpace: 'nowrap',
-  textTransform: 'none',
-  fontWeight: 600,
-  background: '#fff3e0',
-  color: '#bf360c',
-  borderColor: '#bf360c',
-  '&:hover': {
-    background: '#ffe0b2'
-  }
-}));
-
 export const BlueButton = styled(Button)(({ theme }) => ({
   padding: '8px 12px',
   whiteSpace: 'nowrap',
   textTransform: 'none',
   fontWeight: 600,
-  background: '#e3f2fd',
-  color: '#0d47a1',
-  borderColor: '#0d47a1',
+  background: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, .2)' : '#e3f2fd',
+  color: theme.palette.mode === 'dark' ? 'lime' : '#0d47a1',
+  borderColor: theme.palette.mode === 'dark' ? 'lime' : '#0d47a1',
   '&:hover': {
-    background: '#bbdefb'
+    background: theme.palette.mode === 'dark' ? 'lime' : '#bbdefb'
   }
-}));
-
-export const StepTabBar = styled(Box, {
-  shouldForwardProp: prop => (prop !== 'hot' && prop !== 'bgColor')
-})(({ theme, hot, bgColor }) => ({
-  position: 'absolute',
-  height: 2,
-  width: '100%',
-  bottom: 0,
-  left: 0,
-  right: 0,
-  transition: 'opacity 300ms',
-  opacity: hot ? 1 : 0,
-  background: bgColor ? bgColor : 'dodgerblue',
-  borderRadius: '10px !important'
 }));
 
 export const StepTabButton = styled(Button, {
@@ -51,10 +23,10 @@ export const StepTabButton = styled(Button, {
 })(({ theme, hot }) => ({
   fontFamily: theme.typography.fontFamily,
   background: theme.palette.mode === 'dark'
-    ? hot ? 'blue' : 'rgba(255, 255, 255, .12)'
+    ? hot ? 'lime' : 'rgba(255, 255, 255, .12)'
     : hot ? 'rgba(0, 0, 255, .14)' : 'rgba(0, 0, 0, .06)',
   color: theme.palette.mode === 'dark'
-    ? '#ffffff'
+    ? hot ? '#000' : 'white'
     : hot ? '#651fff' : '#678',
   padding: '8px 16px',
   cursor: 'pointer',
@@ -69,7 +41,7 @@ export const StepTabButton = styled(Button, {
   textTransform: 'none !important',
   '&:hover': {
     background: theme.palette.mode === 'dark'
-      ? hot ? 'blue' : 'rgba(255, 255, 255, .14)'
+      ? hot ? 'lime' : 'rgba(255, 255, 255, .16)'
       : hot ? 'rgba(0, 0, 255, .3)' : 'rgba(0, 0, 0, .12)'
   }
 }));

@@ -13,10 +13,13 @@ export const skills = [
   { label: 'Photoshop', group: 3 }
 ];
 
-export const skillsFront = [
+export const front0 = [
   'React',
   'Next.js',
-  'Redux',
+  'Redux'
+];
+
+export const front1 = [
   'Gatsby',
   'HTML',
   'CSS',
@@ -24,16 +27,19 @@ export const skillsFront = [
   'JS'
 ];
 
-export const skillsBack = [
+export const back0 = [
   'Node',
   'Express',
   'MongoDB',
+  'AWS',
+  'Vercel',
+];
+
+export const back1 = [
   'Redis',
   'Memcached',
   'PostgreSQL',
   'SQL',
-  'AWS',
-  'Vercel',
   'Netlify',
   'CloudFront',
   'WAF/Shield',
@@ -49,11 +55,14 @@ export const skillsBack = [
   'NPM'
 ];
 
-export const skillsTools = [
+export const misc0 = [
   'Stripe',
   'Mux',
+  'Photoshop'
+];
+
+export const misc1 = [
   'SendGrid',
-  'Photoshop',
   'After Effects',
   'Premiere Pro',
   'Lottie'

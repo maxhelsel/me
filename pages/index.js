@@ -77,9 +77,6 @@ function Index(props) {
               <Typography variant='h4' style={{ padding: '48px 0px 0px' }} >
                 {`Facelifts`}
               </Typography>
-              <Typography variant='h5' style={{ padding: '4px 0px 0px' }} >
-                {`Sometimes, I take a website and try to improve its look.`}
-              </Typography>
             </Grid>
           </Grid>
           <Grid container flexDirection='column' flexWrap='nowrap' style={{ maxWidth: mobile ? 888 : 880, padding: mobile ? '0px 12px' : '0px 8px', margin: '0 auto' }} >

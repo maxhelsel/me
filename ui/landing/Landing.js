@@ -137,13 +137,13 @@ const Landing = props => {
                 </Grid>
               </Grid>
               <Grid container item flex='0' flexWrap='nowrap' style={{ flexFlow: props.mobile ? 'column' : 'row', alignItems: 'center' }} >
-                <IconButton component={Link} href='https://github.com/maxhelsel' target='_blank' rel='noopener' >
+                <IconButton component={Link} aria-label='link to github' href='https://github.com/maxhelsel' target='_blank' rel='noopener' >
                   <GitHubIcon />
                 </IconButton>
-                <IconButton component={Link} href='https://linkedin.com/in/maxhelsel' target='_blank' rel='noopener' >
+                <IconButton component={Link} aria-label='link to linkedin' href='https://linkedin.com/in/maxhelsel' target='_blank' rel='noopener' >
                   <LinkedInIcon />
                 </IconButton>
-                <IconButton onClick={handleOpen} >
+                <IconButton onClick={handleOpen} aria-label='show contact email' >
                   <MailIcon />
                 </IconButton>
               </Grid>

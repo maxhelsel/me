@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { CustomModalStyled } from '/styled/Dialogs.js';
@@ -29,7 +28,7 @@ const ShowEmail = props => {
           </Typography>
         </Grid>
         <div style={{ width: '100%', padding: 12 }} >
-          <BlueButton aria-label='close' fullWidth onClick={handleClose} >
+          <BlueButton variant='outlined' aria-label='close' fullWidth onClick={handleClose} >
             {`Close`}
           </BlueButton>
         </div>
