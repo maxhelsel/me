@@ -70,7 +70,7 @@ export const FaceliftFooter = ({ newLink }) => {
     >
       <Grid container item flexWrap='nowrap' alignItems='center' >
         <Typography noWrap variant='b1' style={{ paddingLeft: 12 }} >
-          {`Full Demo`}
+          {`Demo`}
         </Typography>
         <Avatar style={{ background: 'unset' }} >
           <ExternalIcon />

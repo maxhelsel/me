@@ -11,7 +11,7 @@ import LandingFacelifts from '/ui/landing/LandingFacelifts.js';
 import MaxFooter from '/ui/navigation/MaxFooter.js';
 
 export async function getStaticProps() {
-
+  // remember limited to 5 api calls to Polygon / minute
   const res1 = await fetch(`https://api.polygon.io/v2/aggs/ticker/NVDA/prev?adjusted=true&apiKey=${process.env.NEXT_PUBLIC_POLYGON_KEY}`);
   const res2 = await fetch(`https://api.polygon.io/v2/aggs/ticker/SPY/prev?adjusted=true&apiKey=${process.env.NEXT_PUBLIC_POLYGON_KEY}`);
   const res3 = await fetch(`https://api.polygon.io/v2/aggs/ticker/UVXY/prev?adjusted=true&apiKey=${process.env.NEXT_PUBLIC_POLYGON_KEY}`);
