@@ -4,7 +4,8 @@ import { createTheme } from '@mui/material/styles';
 export const noto = Noto_Sans({
   weight: ['400', '500', '600', '700'],
   style: ['normal', 'italic'],
-  subsets: ['latin']
+  subsets: ['latin'],
+  display: 'fallback'
 });
 
 const theme = (dark) => createTheme({
