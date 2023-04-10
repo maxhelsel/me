@@ -31,7 +31,7 @@ const LandingBuilding = props => {
           icon={<Image src={ConjureLogo} alt='conjure' height={30} width={30}  />}
           iconBg='rgba(25, 25, 220, .1)'
           textLines={[
-            `Make any content, and monetize it. Multimedia social content platform.`,
+            `Make and monetize anything. Multimedia social content platform.`,
             `Closed alpha now, open beta coming soon...`,
           ]}
           bulletLines={[

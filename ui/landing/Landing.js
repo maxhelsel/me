@@ -110,7 +110,7 @@ const Landing = props => {
                   {`Max Helsel`}
                 </Typography>
                 <Typography variant='b1' >
-                  {`Michigan, USA, Earth`}
+                  {`USA, Earth`}
                 </Typography>
                 <Typography variant='b2' >
                   {`I like patterns, logic, and building things`}
@@ -122,7 +122,7 @@ const Landing = props => {
                     icon={<CodeIcon color='blue' />}
                     iconBg='rgba(25, 25, 220, .1)'
                     textLines={[
-                      `Full stack, I do it all`
+                      `Full stack`
                     ]}
                   />
                   <InfoBox
