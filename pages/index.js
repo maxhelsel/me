@@ -7,11 +7,10 @@ import Grid from '@mui/material/Grid';
 import Landing from '/ui/landing/Landing.js';
 import LandingBuilding from '/ui/landing/LandingBuilding.js';
 import LandingTools from '/ui/landing/LandingTools.js';
-import LandingFacelifts from '/ui/landing/LandingFacelifts.js';
 import MaxFooter from '/ui/navigation/MaxFooter.js';
 
 export async function getStaticProps() {
-  // remember limited to 5 api calls to Polygon / minute
+  // remember limited to 5 api calls to Polygon / minute; need to do one at a time
   const res1 = await fetch(`https://api.polygon.io/v2/aggs/ticker/NVDA/prev?adjusted=true&apiKey=${process.env.NEXT_PUBLIC_POLYGON_KEY}`);
   const res2 = await fetch(`https://api.polygon.io/v2/aggs/ticker/SPY/prev?adjusted=true&apiKey=${process.env.NEXT_PUBLIC_POLYGON_KEY}`);
   const res3 = await fetch(`https://api.polygon.io/v2/aggs/ticker/UVXY/prev?adjusted=true&apiKey=${process.env.NEXT_PUBLIC_POLYGON_KEY}`);
@@ -73,14 +72,6 @@ function Index(props) {
           <Grid container flexDirection='column' flexWrap='nowrap' style={{ maxWidth: 880, padding: '0px 8px', margin: '0 auto' }} >
             <LandingBuilding mobile={mobile} dark={dark} />
             <LandingTools mobile={mobile} dark={dark} />
-            <Grid container flexDirection='column' flexWrap='nowrap' style={{ padding: '16px 12px' }} >
-              <Typography variant='h4' style={{ padding: '48px 0px 0px' }} >
-                {`Facelifts`}
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid container flexDirection='column' flexWrap='nowrap' style={{ maxWidth: mobile ? 888 : 880, padding: mobile ? '0px 12px' : '0px 8px', margin: '0 auto' }} >
-            <LandingFacelifts mobile={mobile} dark={dark} />
           </Grid>
         </Grid>
         <MaxFooter dark={dark} />

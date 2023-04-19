@@ -48,13 +48,7 @@ const MaxFooter = ({ dark }) => {
         <Typography component='p' variant='fine' style={{ paddingTop: 12 }} >
           {`Copyright © Max Helsel. All Rights Reserved.`}
         </Typography>
-        <Typography component='p' variant='fine' style={{ paddingTop: 4 }} >
-          {`All product names, trademarks and registered trademarks are property of their respective owners. Use of these names, trademarks and brands does not imply endorsement or affiliation.`}
-        </Typography>
-        <Typography component='p' variant='fine' style={{ paddingTop: 4 }} >
-          {`Everything on the Site is provided to you “as is” without warranty of any kind, either express or implied, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose or non-infringement.`}
-        </Typography>
-        <Typography component='p' variant='fine' style={{ paddingTop: 4 }} >
+        <Typography component='p' variant='fine' style={{ paddingTop: 12 }} >
           {`Any financial data on this site is delayed. You should not construe any such information or other material as investment, financial, or other advice. Nothing contained on this website constitutes a solicitation, recommendation, endorsement, or offer to buy or sell any securities or other financial instruments.`}
         </Typography>
       </FooterBoxStyled>
