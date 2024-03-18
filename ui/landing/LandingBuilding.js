@@ -48,15 +48,6 @@ const LandingBuilding = props => {
             `Mobile optimization and native apps`
           ]}
         />
-        <InfoBox
-          title={`Untitled`}
-          icon={<PrivacyIcon color='#234' />}
-          iconBg='rgba(0, 0, 0, .1)'
-          padding='16px 0px 0px'
-          textLines={[
-            `Dashboard that tracks politician trading activity, campaign spending, and donor cashflow. Uses APIs from both the US Government and third party transparency groups.`
-          ]}
-        />
       </Grid>
     </BoxBorderStyled>
   )

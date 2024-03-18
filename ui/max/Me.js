@@ -89,20 +89,20 @@ const WearHat = props => {
   if (props.hat === 1) {
     return (
       <Grid container item flexWrap='nowrap' style={{ position: 'absolute', justifyContent: 'center', top: -28, left: -3 }} >
-        <Image priority src={CowboyHat} alt='cowboy hat' />
+        <Image priority src={CowboyHat} alt='cowboy hat' key={'CowboyHat'} />
       </Grid>
     )
   };
   if (props.hat === 2) {
     return (
       <Grid container item flexWrap='nowrap' style={{ position: 'absolute', justifyContent: 'center', top: -64, left: -2 }} >
-        <Image priority src={WizardHat} alt='wizard hat' />
+        <Image priority src={WizardHat} alt='wizard hat' key={'WizardHat'} />
       </Grid>
     )
   };
   return (
     <Grid container item flexWrap='nowrap' style={{ position: 'absolute', justifyContent: 'center', top: 23, left: 12 }} >
-      <Image priority src={MaskHat} alt='gas mask' />
+      <Image priority src={MaskHat} alt='gas mask' key={'MaskHat'} />
     </Grid>
   );
 };
